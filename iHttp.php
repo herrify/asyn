@@ -2,8 +2,8 @@
 /**
  * 发送HTTP/HTTPS请求的类[支持批量异步GET(POST)请求,支持服务器代理]
  *
- * @author PHPJungle
- * @since 2015/03/20 周五
+ * @author 
+ * @since 
  * @abstract
  * 	1.希望对gets，posts方法添加回调函数支持 :)
  */

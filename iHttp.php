@@ -519,4 +519,29 @@ class iHttp{
 		
 		return ;
 	}
+	
+	
+	public function offline(){
+		$mac = '';
+		$userlist = '';// usermac,offline_time+usermac,offline_time....
+		$date = date('Y-m-d',time());
+		
+		$users = explode('+',$userlist);
+		foreach($users as $user){
+			$user_args = explode(',',$user);
+			$usermac = strtolower(str_replace(':','',$user_args[0]);
+			$memc = cmi::memcache('DASH_MEMCACHE');
+			$key = 'mcd_mac_phone_'.$usermac;
+			$result = $memc->get($key);
+			if($result){
+			return $result;
+			}
+			return false;
+		}
+	}
+	
+	
+	
+	
+	
 }
